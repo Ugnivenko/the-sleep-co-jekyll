@@ -1,5 +1,15 @@
 --- 
 layout: default
+cards:
+- heading: small heading
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+  featured_image: /images/the-sleep-co-original1.jpg
+- heading: small heading
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+  featured_image: /images/the-sleep-co-original1.jpg
+- heading: small heading
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+  featured_image: /images/the-sleep-co-original1.jpg
 ---
 
 
@@ -46,33 +56,21 @@ layout: default
     <!-- Cards  -->
 
     <section class="grid padded">
+
+        {% for item in page.cards %} 
+
         <div class="col-4 padded-sm">
             <div class="card">
-                <div class="bg-image portrait"> </div>
+                <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}')"> </div>
                 <div class="padded-1">
-                    <h3> little heading </h3>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>  
+                    <h3> {{item.heading}} </h3>
+                    <p> {{item.description}} </p>  
                 </div>
             </div>    
         </div>
-        <div class="col-4 padded-sm">
-            <div class="card">
-                <div class="bg-image portrait"> </div>
-                <div class="padded-1">
-                    <h3> little heading </h3>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>  
-                </div>
-            </div>      
-        </div>
-        <div class="col-4 padded-sm">
-            <div class="card">
-                <div class="bg-image portrait"> </div>
-                <div class="padded-1">
-                    <h3> little heading </h3>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>  
-                </div>
-            </div>      
-        </div>
+
+        {% endfor %} 
+
     </section>
 
       <!----------------- Gallery / about Section  ----------------->

@@ -1,5 +1,14 @@
 ---
 layout: default
+featured:
+- icon: fab fa-pagelines
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+- icon: fab fa-pagelines
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+- icon: fab fa-pagelines
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
+- icon: fab fa-pagelines
+  description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
 ---
 
 
@@ -46,26 +55,21 @@ layout: default
 
     <!-----------------  Feature icon grid  ----------------->
 
-    <section class="padded grid bg-dark"> 
+    <section class="padded grid-center bg-dark"> 
+
         <div class="padded-sm col-12 text-center">
             <h2> <span class="featured-text">features</span> you will love </h2>     
         </div> 
+
+        {% for item in page.featured %} 
+
         <div class="padded-sm col-3_sm-6 xxs-stack editable">
-            <i class="fab fa-pagelines"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>  
-        </div> 
-        <div class="col-3_sm-6 xxs-stack padded-sm editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>     
-        </div> 
-        <div class="padded-sm col-3_sm-6 xxs-stack editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>      
-        </div> 
-        <div class="padded-sm col-3_sm-6 xxs-stack editable">
-            <i class="fas fa-cloud"></i>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe repellat delectus, suscipit nobis facilis voluptatibus odio distinctio? </p>      
-        </div> 
+            <i class=" {{item.icon}}"></i>
+            <p> {{item.description}} </p>  
+        </div>  
+
+        {% endfor %}
+
     </section>
 
     <!-----------------  Image banner   ----------------->
