@@ -1,27 +1,25 @@
 ---
 layout: default
 gallery:
-- column-size: col-6 
-  aspect-ratio: square 
-  background-image: /images/the-sleep-co-original3.jpg 
-- column-size: col-6 
-  aspect-ratio: square 
-  background-image: /images/the-sleep-co-original4.jpg 
-- column-size: col-12 
-  aspect-ratio: landscape 
-  background-image: /images/the-sleep-co-original2.jpg 
-- column-size: col-4  
-  aspect-ratio: portrait-tall 
-  background-image: /images/the-sleep-co-original4.jpg 
-- column-size: col-4  
-  aspect-ratio: portrait-tall 
-  background-image: /images/the-sleep-co-original3.jpg 
-- column-size: col-4  
-  aspect-ratio: portrait-tall 
-  background-image: /images/the-sleep-co-original4.jpg 
-
---- 
-
+  - column-size: col-6
+    aspect-ratio: square
+    background-image: /images/the-sleep-co-original3.jpg
+  - column-size: col-6
+    aspect-ratio: square
+    background-image: /images/the-sleep-co-original4.jpg
+  - column-size: col-12
+    aspect-ratio: landscape
+    background-image: /images/the-sleep-co-original2.jpg
+  - column-size: col-4
+    aspect-ratio: portrait-tall
+    background-image: /images/the-sleep-co-original4.jpg
+  - column-size: col-4
+    aspect-ratio: portrait-tall
+    background-image: /images/the-sleep-co-original3.jpg
+  - column-size: col-4
+    aspect-ratio: portrait-tall
+    background-image: /images/the-sleep-co-original4.jpg
+---
 <!--------------- Header Banner ------------------->
 <header class="grid tall-60"> 
         
@@ -32,7 +30,7 @@ gallery:
             <span class="featured-text"> explore </span>  our world
         </h3>
         <h1 class="font-weight-light editable">
-            you won't want to get out of bed
+            your dreamful and cozy place
         </h1> 
     </div> 
 </header>
@@ -43,8 +41,7 @@ gallery:
 
         {% for item in page.gallery %}
         <div class="{{item.column-size}}">
-        <div class="bg-image {{item.aspect-ratio}}" 
-             style="background-image: url('{{item.background-image}}');">
+        <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background-image}}');">
         </div>
         </div> 
         {% endfor %}
