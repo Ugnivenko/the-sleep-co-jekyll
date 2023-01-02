@@ -115,7 +115,21 @@
 
 /* Image Gallery */
 .gallery [class*="col-"] { padding: 0.5%;}
-
+.gallery .gallery-item {
+    border-bottom: none;
+}
+.lg-backdrop.in {
+    opacity: 0.95;
+  }
+  .lg-backdrop {background-color: rgb(20,20,20);}
+  .button-gallery {
+    padding: 0.5rem 2rem;
+    background-color: #FFBE00;
+    appearance: none;
+    border: 2px solid #FFBE00;
+    color: inherit;
+}
+.button-gallery:hover {color: white;}
 /*  Typography Styles  --------------------  */
 
 body { 

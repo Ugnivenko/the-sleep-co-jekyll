@@ -35,17 +35,50 @@ gallery:
     </div> 
 </header>
 
+
 <!-- Gallery -->
 <section class="padded">
-    <div class="gallery grid">
+
+<!-- Popup Gallery -->
+  <h2>Popup Gallery</h2>
+    <div class="gallery grid" id="lightgallery">
 
         {% for item in page.gallery %}
-        <div class="{{item.column-size}}">
+        <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
         </div>
-        </div> 
+      </a> 
         {% endfor %}
       </div>
+
+      <!-- this is a good option for the case of "see exsamples of our work" -->
+      <div class="gallery grid" id="lightgallery-2" style="padding: 0.5%">
+
+        <a class="button-gallery" href="/images/the-sleep-co-original4.jpg" title="Funny Dog 1">
+            View Our Work 
+      </a> 
+        <a href="/images/the-sleep-co-original4.jpg" title="Funny Dog 2"></a>
+        <a href="/images/the-sleep-co-original2.jpg" title="Cozy & Soft"></a>
+        <a href="/images/the-sleep-co-original3.jpg" title="Our Products"></a>
+        <a href="/images/the-sleep-co-original4.jpg" title="Funny Dog 3"></a>
+     
+      </div>
+
+</section>
+
+
+    <section class="padded">
+      <h2>Standard Gallery</h2>
+      <div class="gallery grid">
+  
+          {% for item in page.gallery %}
+          <div class="{{item.column-size}}">
+          <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
+          </div>
+          </div> 
+          {% endfor %}
+        </div>
+    </section>
 
       <!-- <div class="gallery grid">
         <div class="col-6">
