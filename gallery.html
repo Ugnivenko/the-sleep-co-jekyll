@@ -1,24 +1,32 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: bg-dark
 gallery:
   - column-size: col-6
     aspect-ratio: square
     background_image: /images/the-sleep-co-original3.jpg
+    type: dog
   - column-size: col-6
     aspect-ratio: square
     background_image: /images/the-sleep-co-original4.jpg
+    type: cat
   - column-size: col-4
     aspect-ratio: portrait
     background_image: /images/the-sleep-co-original4.jpg
+    type: dog
   - column-size: col-4
     aspect-ratio: portrait
     background_image: /images/the-sleep-co-original3.jpg
+    type: sheep
   - column-size: col-4
     aspect-ratio: portrait
     background_image: /images/the-sleep-co-original4.jpg
+    type: dog
   - column-size: col-12
     aspect-ratio: landscape-wide
     background_image: /images/the-sleep-co-original2.jpg
+    type: cat
 ---
 <!--------------- Header Banner ------------------->
 <header class="grid tall-60"> 
@@ -37,22 +45,30 @@ gallery:
 
 
 <!-- Gallery -->
-<section class="padded">
+
+{% if page.popup-gallery == true %}
+<section class="padded {{page.gallery-background}}"
+>
 
 <!-- Popup Gallery -->
   <h2>Popup Gallery</h2>
     <div class="gallery grid" id="lightgallery">
 
         {% for item in page.gallery %}
+        {% if item.type != 'dog' %}
+
         <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
         </div>
       </a> 
+
+        {% endif %}
         {% endfor %}
+
       </div>
 
-      <!-- this is a good option for the case of "see exsamples of our work" -->
-      <div class="gallery grid" id="lightgallery-2" style="padding: 0.5%">
+  <!-- this is a good option for the case of "see exsamples of our work" -->
+      <!-- <div class="gallery grid" id="lightgallery-2" style="padding: 0.5%">
 
         <a class="button-gallery" href="/images/the-sleep-co-original4.jpg" title="Funny Dog 1">
             View Our Work 
@@ -62,12 +78,11 @@ gallery:
         <a href="/images/the-sleep-co-original3.jpg" title="Our Products"></a>
         <a href="/images/the-sleep-co-original4.jpg" title="Funny Dog 3"></a>
      
-      </div>
-
+      </div> -->
 </section>
+{% else %}
 
-
-    <!-- <section class="padded">
+    <section class="padded {{page.gallery-background}}">
       <h2>Standard Gallery</h2>
       <div class="gallery grid">
   
@@ -78,7 +93,9 @@ gallery:
           </div> 
           {% endfor %}
         </div>
-    </section> -->
+    </section>
+
+{% endif %}
 
       <!-- <div class="gallery grid">
         <div class="col-6">
