@@ -1,6 +1,6 @@
 ---
 layout: default
-popup-gallery: true
+popup-gallery: false
 gallery-background: bg-dark
 gallery:
   - column-size: col-6
@@ -55,12 +55,13 @@ gallery:
     <div class="gallery grid" id="lightgallery">
 
         {% for item in page.gallery %}
+        {% if item.type == 'dog' or item.type == 'sheep' %}
 
         <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
         </div>
       </a> 
-
+        {% endif %}
         {% endfor %}
 
       </div>
