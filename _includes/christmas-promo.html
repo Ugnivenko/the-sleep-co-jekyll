@@ -1,0 +1,19 @@
+---
+title: My page
+my_variable: christmas-promo.html
+---
+
+{% if page.my_variable %}
+    {% include {{page.my_variable}} %}
+{% endif %}
+
+
+<section class="padded text-center bg-dark tall-70 grid ">
+    <div class="col-12-middle" >  
+        <h3 class="big-text"> 
+            <span class="small-text font-weight-normal">Happy hunting, and cheers to a brighter 2023! </span>
+            <br />Up to<span class="featured-text">50%</span>off
+        </h3> 
+    </div>
+</section>
+

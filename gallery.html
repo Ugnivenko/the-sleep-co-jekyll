@@ -27,6 +27,7 @@ gallery:
     aspect-ratio: landscape-wide
     background_image: /images/the-sleep-co-original2.jpg
     type: cat
+my_variable: christmas-promo.html 
 ---
 <!--------------- Header Banner ------------------->
 <header class="grid tall-60"> 
@@ -121,3 +122,13 @@ gallery:
  <!-----------------  Testimonial section   ----------------->
 
  {% include testimonial.html %}
+ 
+ <!-- YouTube Video -->
+
+ {% include youtude.html youtube_id="ZAfTmhq2ahA" %}
+ 
+ <!-- Promo Banner  -->
+
+ {% if page.my_variable %}
+   {% include {{page.my_variable}} %}
+ {% endif %}
