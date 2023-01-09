@@ -1,0 +1,17 @@
+seo:
+  site_name: Sleep Co
+  title: default SEO title
+  description:
+  keywords:
+  social_image:
+  author:
+  favorite_image: 
+social:
+  instagram_username: 
+  facebook_url:
+  twitter_username:
+design:
+  dark-background_color: #192B37
+  light-background_color: #E3ECF2
+  featured_color: #F4B525
+  icons_color: rgb(120,120,125)
