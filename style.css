@@ -339,6 +339,18 @@ textarea:focus {
     height: 100%; 
 }
 
+.major:after {
+    background: rgba(144, 144, 144, 0.5);
+    content: '';
+    display: inline-block;
+    height: 1px;
+    margin-top: -4.5em;
+    width: 6em;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 
 /* ------- MD Media Query (64em / 1024px) --------------- */ 
