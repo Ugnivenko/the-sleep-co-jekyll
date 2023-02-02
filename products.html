@@ -18,8 +18,8 @@ cards:
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto incidunt
       vero et praesentium. Possimus quae praesentium eaque eius et id odit saepe
       repellat delectus, suscipit nobis facilis voluptatibus odio distinctio?
-    featured_image: /images/the-sleep-co-original1.jpg
-banner: false  
+    featured_image: /images/the-sleep-co-original1.jpg 
+banner: false 
 ---
 <!--------------- Header Banner ------------------->
     <header class="grid tall-60"> 
@@ -58,31 +58,31 @@ banner: false
 
     </section>
 
+    <!-----------------  Image banner   ----------------->
 
-        <!-----------------  Image banner   ----------------->
-
-{% if page.banner == true %}
-        <section class="padded text-center bg-dark tall-70 grid ">
-            <div class="col-12-middle" >  
-                <h3 class="big-text"> 
-                    <span class="small-text font-weight-normal">spend over $150 and activate </span>
-                    <br /><span class="featured-text">free</span> express shipping
-                </h3> 
-            </div>
-        </section>
+    {% if page.banner == true %}
+    <section class="padded text-center bg-dark tall-70 grid ">
+        <div class="col-12-middle" >  
+            <h3 class="big-text"> 
+                <span class="small-text font-weight-normal">spend over $150 and activate </span>
+                <br /><span class="featured-text">free</span> express shipping
+            </h3> 
+        </div>
+    </section>
 
 {% else %}
 
-        <section class="padded text-center bg-dark tall-70 grid ">
-            <div class="col-12-middle" >  
-                <h3 class="big-text"> 
-                    <span class="small-text font-weight-normal">looking for holiday deals? </span>
-                    <br />save up to <span class="featured-text">20%</span> 
-                </h3> 
-            </div>
-        </section>
+    <section class="padded text-center bg-dark tall-70 grid ">
+        <div class="col-12-middle" >  
+            <h3 class="big-text"> 
+                <span class="small-text font-weight-normal">looking for holiday deals? </span>
+                <br />save up to <span class="featured-text">20%</span> 
+            </h3> 
+        </div>
+    </section>
 
- {% endif %}        
+{% endif %}  
+
 
       <!----------------- Gallery / about Section  ----------------->
       <section class="grid"> 
