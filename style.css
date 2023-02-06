@@ -292,6 +292,13 @@ textarea:focus {
     max-width: 280px;
     margin: auto;
 }
+.shop-button {
+    padding: 0.5rem 2rem;
+    background-color: #FFBE00;
+    color: #192B37;
+    border-bottom: none;
+}
+.shop-button:hover { color: white;}
 .capped-width { 
     width: 1000px;
     margin: auto;
