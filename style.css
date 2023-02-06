@@ -287,6 +287,16 @@ textarea:focus {
     line-height: 1;
 }
 
+/* Shopify ----------------------------- */
+.shop {
+    max-width: 280px;
+    margin: auto;
+}
+.capped-width { 
+    width: 1000px;
+    margin: auto;
+}
+
 
 
 /* General CSS  Respondive Styles (Apply everywhere unless overrided) */ 
