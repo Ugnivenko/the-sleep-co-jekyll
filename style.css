@@ -298,6 +298,12 @@ textarea:focus {
     color: #192B37;
     border-bottom: none;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .shop-button:hover { color: white;}
 .capped-width { 
     width: 1000px;
