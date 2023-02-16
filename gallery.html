@@ -58,13 +58,13 @@ youtube_id: ZAfTmhq2ahA
     <div class="gallery grid" id="lightgallery">
 
         {% for item in page.gallery %}
-        {% if item.type == 'dog' or item.type == 'sheep' %}
+        <!-- {% if item.type == 'dog' or item.type == 'sheep' %} -->
 
         <a class="{{item.column-size}} gallery-item" href="{{item.background_image}}">
         <div class="bg-image {{item.aspect-ratio}}" style="background-image: url('{{item.background_image}}');">
         </div>
       </a> 
-        {% endif %}
+        <!-- {% endif %} -->
         {% endfor %}
 
       </div>
